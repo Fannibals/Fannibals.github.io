@@ -58,7 +58,7 @@ print(humanStruct.name) // Ethan
 
 
 
-####OOP vs POP
+#### OOP vs POP
 
 **A protocol is like a basketball coach. He tells his players what to do, but he doesn’t know how to dunk a basketball.**
 
