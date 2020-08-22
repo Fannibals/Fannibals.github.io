@@ -293,3 +293,33 @@ using Jill::fetch;  // a using declaration, only fetch
 using namespace Jack; // make all the names in Jack aval
 ```
 
+**using声明 vs using编译指令**
+
+- using声明使得名称空间中的单个名称可用。
+
+- 后者则是所有名称可用
+
+
+
+---
+
+**编程练习三：**
+
+定位new运算符：
+
+> **编写一个程序，使用定位new运算符将一个包含两个这种结构的数组放在一个缓冲区中。然后，给结构的成员赋值（对于char数组，使用函数strcpy()），并使用一个循环来显示内容。一种方法是像程序清单9.10那样将一个静态数组用作缓冲区；另一种方法是使用常规new运算符来分配缓冲区**
+
+```c++
+const int Buf = 512;
+int main()
+{
+  // 静态数组用作缓冲区
+  char buffer[Buf];
+  chaff* pc1 = new (buffer) chaff[2];
+  
+  // 动态数组用作缓冲区
+  char *pc = new char[Buf];
+  chaff* pc2 = new (pc) chaff[2];
+}
+```
+
