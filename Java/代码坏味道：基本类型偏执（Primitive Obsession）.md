@@ -94,8 +94,6 @@
 
 - 创建Customer对象并建立final值域，用来保存一个String
 
-  - 实值对象应该是不可修改的，这样可以避免一些别名错误
-
   ```java
   class Customer {
   	private final String name;
@@ -111,6 +109,7 @@
 - 然后把Order中的customer值修改为Customer实例
 
   - 并修改其参数名，使其更加符合本意
+  - 实值对象应该是不可修改的，这样可以避免一些别名错误
 
   ```java
    class Order {
@@ -121,6 +120,7 @@
      public String getCustomerName() {
          return customer.getName();
      }
+     // 实值对象应该是不可修改的，这样可以避免一些别名错误
      public void setCustomer(String customerName) {
          customer = new Customer(customerName);
      }   
