@@ -1,52 +1,27 @@
-## C++ primer plus #8
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <link href="styles/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Mozilla is cool</h1>
+    <img src="images/gflex-icon.png" width=500 height=500 alt="The Firefox logo: a flaming fox surrounding the Earth.">
 
-### Reference Variables
+    <p>At Mozilla, we’re a global community of</p>
 
-1. &
+    <ul> <!-- changed to list in the tutorial -->
+      <li>technologists</li>
+      <li>thinkers</li>
+      <li>builders</li>
+    </ul>
 
-- &这个符号的第一个用法就是表示一个变量的地址
-- & 还可以被用来声明引用
+    <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. 
+      We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
 
-比如：
-
-```c++
-int rats;
-int & rodents = rats;	// make rodents an alias for rats
-```
-
-```int &``` means reference-to-int.
-
-⚠️：必须在声明引用变量时进行初始化
-
-```c++
-int a = 1;
-int& b = a;
-cout << "a = " << a << " a:ads->" << &a << endl;
-cout << "b = " << b << " b:ads->" << &b << endl;
-cout << "-------------" << endl;
-int c = 2;
-b = c;
-cout << "a = " << a << " a:ads->" << &a << endl;
-cout << "b = " << b << " b:ads->" << &b << endl;
-```
-
-**<font color=red>Output:</font>**
-
-```c++
-a = 1 a:address->0x7ffee376a748
-b = 1 b:address->0x7ffee376a748
--------------
-a = 2 a:address->0x7ffee376a748
-b = 2 b:address->0x7ffee376a748
-```
-
-
-
-
-
-**Pointer vs. Reference**
-
-- A **pointer** in C++ is a variable that holds the memory address of another variable.
-- A **reference** is an alias for an already existing variable. Once a reference is initialized to a variable, it cannot be changed to refer to another variable. Hence, a reference is similar to a **const pointer**.
-
-![Screen Shot 2020-08-15 at 3.07.10 pm](/Users/Ethan/Desktop/Fannibals.github.io/C++/pic/Screen Shot 2020-08-15 at 3.07.10 pm.png)
+    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> 
+      to learn even more about the values and principles that guide the pursuit of our mission.</p>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
