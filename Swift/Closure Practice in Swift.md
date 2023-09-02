@@ -1,4 +1,0 @@
-## Closure Practice in Swift
-
----
-
